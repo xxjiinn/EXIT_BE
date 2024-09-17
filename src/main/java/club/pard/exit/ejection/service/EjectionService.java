@@ -3,6 +3,7 @@ package club.pard.exit.ejection.service;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -65,7 +66,7 @@ public class EjectionService {
 
             for(EjectionRank each: rankRaw)
             {
-                if(each.getUserId() == userId)
+                if(Objects.equals(each.getUserId(), userId))
                 {
                     targetUserRank = each.getRank();
                     targetUserNickname = userRepository.findById(each.getUserId()).get().getNickname();
