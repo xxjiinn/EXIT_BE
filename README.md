@@ -1,4 +1,4 @@
-p align="center">
+<p align="center">
     <img src="./assets/exit-banner.png" />
     <img src="./assets/exit-logo.png" />
 </p>
